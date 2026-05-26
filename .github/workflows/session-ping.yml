@@ -1,0 +1,13 @@
+name: Session Ping
+
+on:
+  schedule:
+    - cron: '0 */5 * * *'   # every 5 hours
+  workflow_dispatch:          # lets you trigger it manually too
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hi
+        run: echo "hi"
